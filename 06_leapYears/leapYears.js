@@ -1,17 +1,16 @@
-const LEAP_YEAR = true;
 
 const leapYears = function (year) {
   /* years divisible by 4 are not leap years */
   if (year % 4 !== 0) {
-    return !LEAP_YEAR;
+    return false;
   }
 
-  /* special case, years which are divisible 
+  /* special case: years which are divisible 
   by 100 and not divisible by 400 are not leap years */
   if (year % 100 === 0 && !(year % 400 === 0)) {
-    return !LEAP_YEAR;
+    return false;
   }
-  return LEAP_YEAR;
+  return true;
 };
 
 // Do not edit below this line
