@@ -15,7 +15,7 @@ const sum = function (nums) {
 
 const multiply = function (nums) {
   return nums.reduce(
-    (accumulator, currentValue) => accumulator * currentValue,
+    (product, currentValue) => product * currentValue,
     1
   );
 };
@@ -33,9 +33,6 @@ function factorialize(number) {
     return 1;
   }
 
-  if (number <= 2) {
-    return number;
-  }
   return number * factorialize(number - 1);
 }
 
