@@ -1,23 +1,21 @@
 const fibonacci = function (arg) {
-  let number = Number(arg);
+  let index = Number(arg);
 
-  if (number === NaN || number < 0) {
+  if (index === NaN || index < 0) {
     return "OOPS";
   }
-  if (number < 2) {
-    return number;
+  if (index < 2) {
+    return index;
   }
 
-  let fibonacciIndex = 1;
 
   let result = 0;
   let firstNumber = 0;
   let secondNumber = 1;
-  while (number > fibonacciIndex) {
+  for (let i = 2; i <= index; i++) {
     result = firstNumber + secondNumber;
     firstNumber = secondNumber;
     secondNumber = result;
-    fibonacciIndex++;
   }
   return result;
 };
